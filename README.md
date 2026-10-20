@@ -1,18 +1,15 @@
 # NOCTURNE · 夜曲
 
-A responsive, buildless 3D music room with piano and acoustic guitar modes. Serve `dist/` through any static web server.
+A buildless, viewport-filling piano/guitar lesson player. Serve `dist/` with a static web server.
 
-- Six locally bundled piano scores and twenty Salamander Grand Piano samples.
-- Web Audio sample scheduling, reverb, volume, seek, shuffle, repeat and continuous playback.
-- A procedurally modeled 88-key grand piano, physical lacquer materials, studio reflections, soft shadows, orbit interaction and three camera views.
-- Day/night themes, immersive mode, local favorites, landscape phone and desktop layouts.
-- Acoustic guitar with procedural spruce grain, soundhole, fretboard, tuners, six animated strings, thirteen bundled acoustic recordings, and playable C/Am/F/G/D/Em chord shapes. Tap a string, strum, or use keys 1–6.
-- Switching instruments preserves the selected song and position. Guitar scores are folded into E2–E5 range, limited to six simultaneous pitches, and slightly staggered for a plucked arrangement.
+The page opens on 樱花草 in a close piano view and attempts audible playback and native fullscreen. Browsers that require a gesture show one small start control. Clicking it resumes the AudioContext and retries the Fullscreen API. The application view fills the viewport independently of native fullscreen support.
 
-First audible playback requires a user gesture when the browser blocks autoplay. Fonts have system fallbacks. Music, samples and Three.js are bundled locally.
+The main screen contains song/instrument/menu pills, a compact transport and the instrument. Songs, favorites, playback speed, left/right piano parts, stepwise audition, A–B looping, metronome, free strumming, camera, labels, zoom, volume and credits live in nested menu pages. There is no landing-page introduction.
 
-Music provenance is linked in the site's About dialog. The 樱花草 piano score was transcribed from the EOP two-page arrangement. The Salamander samples by Alexander Holm are used under CC BY 3.0; their audio was not modified. Three.js is MIT licensed (license header retained).
+`scene.js` renders beveled ivory/ebony keys, reflective lacquer, studio lighting, incoming notes, actual key depressions and a closely framed rosewood fingerboard with metallic strings and frets. The guitar view follows high positions. The same event data drives the audio, note readout and physical string/fret markers. Keys and fret positions can be played with pointer input. A Canvas fallback keeps lessons usable without WebGL.
 
-Acoustic guitar recordings: University of Iowa, edited and distributed by Nicholas Brosowsky in [tonejs-instruments](https://github.com/nbrosowsky/tonejs-instruments) under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The redistributed MP3 files are unchanged; browser playback transposes the nearest recording when necessary.
+`music.js` annotates 樱花草's piano staves using its original two velocity-coded voices; other piano scores use an approximate split by register. Guitar arrangements use standard E2–A2–D3–G3–B3–E4 tuning, a beam search for unique string assignments in frets 0–12, no more than four frets of hand span and four distinct pressed fret positions, and consistent single-string note releases. Some voices move octaves or are reduced to make the arrangement playable; these are site-specific simplified arrangements, not an authoritative artist fingering. The displayed string plus fret equals the MIDI pitch that sounds.
 
-Validation: JavaScript syntax, asset/data validation, and a DOM/Web Audio mock integration harness covering playback, song navigation, seeking, favorites, filters, theme, immersion, mute, shuffle/repeat and completion. No connected browser was available for device-level WebGL rendering and real audio output verification.
+Audio: twenty locally bundled Salamander piano samples (Alexander Holm, CC BY 3.0) and thirteen acoustic guitar recordings (University of Iowa, edited/distributed by Nicholas Brosowsky in tonejs-instruments, CC BY 3.0). Source links and attribution are retained in the secondary information page and `dist/assets/guitar/ATTRIBUTION.txt`. Three.js retains its MIT license header. The 樱花草 piano arrangement was transcribed from the linked 37-bar EOP score.
+
+Validated: syntax and local assets; DOM interaction and AudioContext mocks for allowed/blocked autoplay, nested menus, default song, instrument switching, half-speed clock, hand filtering, step audition, A–B loops, strumming, favorites and settings; finite 3D geometry, camera projections on desktop and 844×390 landscape, key and guitar raycast pitch mapping; every bundled guitar arrangement's string/fret pitch, uniqueness, and hand span. A connected browser was unavailable, so real GPU output, device fullscreen behavior and speaker output are not verified.
