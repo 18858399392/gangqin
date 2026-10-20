@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#eeece6"><meta name="description" content="夜曲，一间只属于你的 3D 钢琴房。让熟悉的旋律，在此刻缓缓流淌。">
+  <title>NOCTURNE · 夜曲 — 你的私人钢琴房</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect rx='10' width='40' height='40' fill='%23232724'/><text x='9' y='29' fill='%23eeece6' font-size='30' font-family='serif'>N</text></svg>">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" stroke-width="3"/></symbol>
+<symbol id="i-next" viewBox="0 0 24 24"><path d="m6 6 9 6-9 6Z" fill="currentColor" stroke="none"/><path d="M18 6v12"/></symbol>
+<symbol id="i-prev" viewBox="0 0 24 24"><path d="m18 6-9 6 9 6Z" fill="currentColor" stroke="none"/><path d="M6 6v12"/></symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+<symbol id="i-mute" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4Zm5 4 6 6m0-6-6 6"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+<symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+<symbol id="i-loop" viewBox="0 0 24 24"><path d="M20 8H6a4 4 0 0 0-4 4v2m14-10 4 4-4 4M4 16h14a4 4 0 0 0 4-4v-2M8 12l-4 4 4 4"/></symbol>
+<symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 6h3c5 0 7 12 12 12h3M17 14l4 4-4 4M3 18h3c2 0 3-2 4-4m4-4c1-2 2-4 4-4h3m-4-4 4 4-4 4"/></symbol>
+<symbol id="i-note" viewBox="0 0 24 24"><path d="M9 17V5l12-2v12M9 8l12-2"/><ellipse cx="5.5" cy="18" rx="3.5" ry="2.5"/><ellipse cx="17.5" cy="16" rx="3.5" ry="2.5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+</defs></svg>
+<header class="header">
+ <a class="brand" href="./" aria-label="夜曲首页"><span class="brand-mark"><i></i><i></i><i></i><i></i><i></i></span><span>NOCTURNE<span class="brand-cn">夜曲</span></span></a>
+ <div class="header-caption">A LITTLE ROOM FOR MUSIC <span>为音乐，留一点时间</span></div>
+ <div class="header-actions"><button class="icon-button" id="theme" aria-label="切换夜色" title="切换夜色"><svg><use href="#i-moon"/></svg></button><span class="divider"></span><button class="immersive-button" id="immersive"><svg><use href="#i-expand"/></svg><span>沉浸模式</span></button></div>
+</header>
+<main>
+ <section class="room" aria-label="3D 钢琴房">
+  <div id="scene" role="img" aria-label="可拖动旋转的三维黑色三角钢琴"></div>
+  <div class="hero-copy"><div class="eyebrow"><span></span> YOUR PRIVATE PIANO ROOM</div><h1>让时间，<br>慢一拍<span class="h1-dot">。</span></h1><p>把喧嚣留在门外。<br>此刻，只有你和钢琴。</p><button class="start-button" id="start"><svg><use href="#i-play"/></svg><span id="start-label">开启这一刻</span><span class="start-arrow">↗</span></button><div class="sound-hint" id="sound-hint">轻点开启声音 · 随后自动连续演奏</div></div>
+  <div class="room-coordinate"><span>THE GRAND No. 01</span><span>88 KEYS · ENDLESS POSSIBILITIES</span></div>
+  <div class="scene-loading" id="scene-loading"><span></span>正在布置你的琴房</div>
+  <div class="scene-note" id="scene-note"><span class="live-dot"></span><span id="scene-status">静候一场演奏</span></div>
+  <div class="view-controls"><span class="view-label">视角</span><button class="view-button active" data-view="classic">经典</button><button class="view-button" data-view="keys">琴键</button><button class="view-button" data-view="above">俯瞰</button><span class="view-divider"></span><span class="drag-hint">拖动探索 3D 琴房 <span>↔</span></span></div>
+  <div class="room-signature"><span class="signature-line"></span> Music begins where words end.</div>
+  <button class="exit-immersive icon-button" id="exit-immersive" aria-label="退出沉浸模式"><svg><use href="#i-close"/></svg></button>
+ </section>
+ <section class="library" aria-labelledby="library-title">
+  <div class="library-heading"><div><span class="section-index">01 —</span><h2 id="library-title">此刻，想听什么</h2><span class="library-subtitle">A melody for every mood.</span></div><div class="filters" role="tablist" aria-label="曲目分类"><button class="filter active" role="tab" aria-selected="true" data-filter="all">全部曲目</button><button class="filter" role="tab" aria-selected="false" data-filter="classical">古典</button><button class="filter" role="tab" aria-selected="false" data-filter="pop">流行</button><button class="filter" role="tab" aria-selected="false" data-filter="favorites">我的收藏</button></div></div>
+  <div class="track-list" id="track-list"></div>
+  <div class="library-foot"><span>熟悉的旋律，全新的钢琴独奏。</span><button id="about">关于这间琴房 <span>↗</span></button></div>
+ </section>
+</main>
+<footer class="player" aria-label="音乐播放器">
+ <div class="now-playing"><div class="album-small art-moon" id="player-art"><span>♪</span></div><div class="now-meta"><div><span id="track-title">月光奏鸣曲</span><span class="equalizer" id="equalizer"><i></i><i></i><i></i><i></i></span></div><p id="track-artist">Ludwig van Beethoven</p></div><button class="icon-button favorite" id="favorite" aria-label="收藏当前曲目"><svg><use href="#i-heart"/></svg></button></div>
+ <div class="transport"><div class="transport-buttons"><button class="icon-button secondary-control" id="shuffle" aria-label="随机播放" aria-pressed="false"><svg><use href="#i-shuffle"/></svg></button><button class="icon-button" id="previous" aria-label="上一首"><svg><use href="#i-prev"/></svg></button><button class="play-button" id="play" aria-label="播放"><svg><use href="#i-play"/></svg></button><button class="icon-button" id="next" aria-label="下一首"><svg><use href="#i-next"/></svg></button><button class="icon-button secondary-control enabled" id="loop" aria-label="列表循环" title="列表循环" aria-pressed="true"><svg><use href="#i-loop"/></svg><span class="loop-one">1</span></button></div><div class="progress-row"><span id="elapsed">0:00</span><input type="range" id="progress" min="0" max="100" value="0" step="0.1" aria-label="播放进度"><span id="duration">0:00</span></div></div>
+ <div class="sound-controls"><button class="icon-button" id="mute" aria-label="静音"><svg><use href="#i-volume"/></svg></button><input type="range" id="volume" min="0" max="100" value="65" aria-label="音量"><span class="divider"></span><div class="audio-label"><span>GRAND PIANO</span><small>实录音色 <i></i></small></div></div>
+</footer>
+<div class="toast" role="status" id="toast"></div>
+<dialog id="about-dialog"><button class="icon-button dialog-close" id="close-about" aria-label="关闭"><svg><use href="#i-close"/></svg></button><div class="eyebrow">ABOUT NOCTURNE</div><h2>一间小小的琴房。</h2><p>夜曲，为那些想在音乐里停留一会儿的人而建。拖动钢琴切换角度，或进入沉浸模式，让旋律陪你度过这一刻。</p><p>钢琴采用 Salamander Grand Piano 实录采样（Alexander Holm，CC BY 3.0），配以空间混响。所有曲目均以钢琴音色重新演奏；流行曲为钢琴改编，部分为节选。</p><p class="about-hint">电脑：空格播放 / 暂停 · ← → 快进退 5 秒<br>手机：推荐横屏，戴上耳机聆听</p><div id="credits"></div></dialog>
+<script type="module" src="./app.js"></script>
+</body></html>
