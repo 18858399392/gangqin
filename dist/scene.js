@@ -1,4 +1,5 @@
 import * as THREE from './assets/three.module.js';
+import {createGuitar} from './guitar.js';
 
 export function createPianoRoom(container, onReady, onError) {
  let renderer;
@@ -6,7 +7,8 @@ export function createPianoRoom(container, onReady, onError) {
  renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;container.appendChild(renderer.domElement);
  const scene=new THREE.Scene();scene.background=new THREE.Color('#eeece6');scene.fog=new THREE.Fog('#eeece6',15,33);
  const camera=new THREE.PerspectiveCamera(34,1,.1,70);
- const piano=new THREE.Group();scene.add(piano);piano.rotation.y=-.15;
+ const piano=new THREE.Group();piano.name='grand-piano';scene.add(piano);piano.rotation.y=-.15;
+ const guitar=createGuitar(THREE);scene.add(guitar.group);guitar.group.visible=false;let instrument='piano';
  const ivory=new THREE.MeshPhysicalMaterial({color:0xf2eee1,roughness:.22,metalness:.05,clearcoat:.6,clearcoatRoughness:.1});
  const ebony=new THREE.MeshPhysicalMaterial({color:0x090c0b,roughness:.18,metalness:.18,clearcoat:1,clearcoatRoughness:.06});
  const lacquer=new THREE.MeshPhysicalMaterial({color:0x101413,roughness:.13,metalness:.25,clearcoat:1,clearcoatRoughness:.06});
@@ -72,7 +74,7 @@ export function createPianoRoom(container, onReady, onError) {
  // Soft contact shadow grounds the three legs and the curved body.
  const shadowCanvas=document.createElement('canvas');shadowCanvas.width=128;shadowCanvas.height=128;const sc=shadowCanvas.getContext('2d');const grad=sc.createRadialGradient(64,64,4,64,64,64);grad.addColorStop(0,'rgba(20,28,20,0.23)');grad.addColorStop(.4,'rgba(20,28,20,0.12)');grad.addColorStop(1,'rgba(20,28,20,0)');sc.fillStyle=grad;sc.fillRect(0,0,128,128);const contact=mesh(new THREE.PlaneGeometry(6,6),new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(shadowCanvas),transparent:true,depthWrite:false}),0,.012,.1,scene);contact.rotation.x=-Math.PI/2;contact.castShadow=false;contact.receiveShadow=false;
  let view='classic',width=1,height=1,theta=.7,phi=1.02,radius=10.6,targetTheta=.7,targetPhi=1.02,targetRadius=10.6;let look=new THREE.Vector3(0,1.6,0),targetLook=look.clone();let pointer=null;let dragging=false;let lastMove=performance.now();let night=false;
- function preset(v){view=v;targetTheta=v==='keys'?0:v==='above'?.25:.7;targetPhi=v==='keys'?1.13:v==='above'?.27:1.02;targetRadius=v==='keys'?7.1:v==='above'?10.4:10.6;targetLook.set(0,v==='keys'?1.91:1.65,v==='keys'?.7:0);}
+ function preset(v){view=v;if(instrument==='guitar'){targetTheta=v==='keys'?0:v==='above'?1.1:.25;targetPhi=v==='above'?1.18:1.3;targetRadius=v==='keys'?7.8:10.2;targetLook.set(.35,v==='keys'?2.85:2.35,0);return;}targetTheta=v==='keys'?0:v==='above'?.25:.7;targetPhi=v==='keys'?1.13:v==='above'?.27:1.02;targetRadius=v==='keys'?7.1:v==='above'?10.4:10.6;targetLook.set(0,v==='keys'?1.91:1.65,v==='keys'?.7:0);}
  function resize(){width=container.clientWidth;height=container.clientHeight;renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();const portrait=width<720&&height>width;const immersed=document.body.classList.contains('immersed');camera.setViewOffset(width,height,immersed?0:portrait?0:-width*.155,immersed?0:portrait?-height*.145:0,width,height);camera.updateProjectionMatrix();}
  new ResizeObserver(resize).observe(container);resize();
  renderer.domElement.addEventListener('pointerdown',e=>{pointer={x:e.clientX,y:e.clientY,id:e.pointerId};dragging=false;renderer.domElement.setPointerCapture(e.pointerId);});
@@ -80,11 +82,11 @@ export function createPianoRoom(container, onReady, onError) {
  renderer.domElement.addEventListener('pointerup',()=>{pointer=null;});renderer.domElement.addEventListener('pointercancel',()=>{pointer=null;});
  renderer.domElement.addEventListener('wheel',e=>{e.preventDefault();targetRadius=Math.max(6,Math.min(15,targetRadius+e.deltaY*.008));lastMove=performance.now();},{passive:false});
  let running=true,raf=0,last=performance.now();const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
- function frame(now){if(!running)return;const dt=Math.min((now-last)/1000,.05);last=now;const ease=1-Math.exp(-dt*5);theta+=(targetTheta-theta)*ease;phi+=(targetPhi-phi)*ease;radius+=(targetRadius-radius)*ease;look.lerp(targetLook,ease);const portrait=width<720&&height>width;const r=radius*(portrait?1.05:1);camera.position.set(look.x+r*Math.sin(phi)*Math.sin(theta),look.y+r*Math.cos(phi),look.z+r*Math.sin(phi)*Math.cos(theta));camera.lookAt(look);if(!reduced&&document.body.classList.contains('immersed')&&!pointer&&now-lastMove>6000)targetTheta+=dt*.018;
+ function frame(now){if(!running)return;const dt=Math.min((now-last)/1000,.05);last=now;const ease=1-Math.exp(-dt*5);theta+=(targetTheta-theta)*ease;phi+=(targetPhi-phi)*ease;radius+=(targetRadius-radius)*ease;look.lerp(targetLook,ease);const portrait=width<720&&height>width;const r=radius*(portrait?(instrument==='guitar'?1.75:1.05):1);camera.position.set(look.x+r*Math.sin(phi)*Math.sin(theta),look.y+r*Math.cos(phi),look.z+r*Math.sin(phi)*Math.cos(theta));camera.lookAt(look);if(!reduced&&document.body.classList.contains('immersed')&&!pointer&&now-lastMove>6000)targetTheta+=dt*.018;
   for(const [m,k] of keys){const down=active.has(m);k.value+=(Number(down)-k.value)*Math.min(1,dt*17);k.pivot.rotation.x=k.value*.045;k.m.material=k.value>.15?k.glow:k.base;}
-  renderer.render(scene,camera);raf=requestAnimationFrame(frame);
+  if(instrument==='guitar')guitar.update(reduced?1:dt,reduced?0:now);renderer.render(scene,camera);raf=requestAnimationFrame(frame);
  }
  document.addEventListener('visibilitychange',()=>{running=!document.hidden;if(running){last=performance.now();raf=requestAnimationFrame(frame);}else cancelAnimationFrame(raf);});
  requestAnimationFrame(frame);onReady();
- return {setNotes(notes){active=new Set(notes);},setView(v){preset(v);lastMove=performance.now();},setTheme(isNight){night=isNight;scene.background.set(night?'#202622':'#eeece6');scene.fog.color.copy(scene.background);floorMat.color.copy(scene.background);sun.intensity=night?2.6:4;renderer.toneMappingExposure=night?.85:1.1;},resize};
+ return {setNotes(notes){active=new Set(notes);if(instrument==='guitar')guitar.setNotes(notes);},setInstrument(mode){instrument=mode;piano.visible=mode==='piano';guitar.group.visible=mode==='guitar';active.clear();guitar.setNotes([]);preset(view);},pluck(note,string){guitar.pluck(note,string);},setView(v){preset(v);lastMove=performance.now();},setTheme(isNight){night=isNight;scene.background.set(night?'#202622':'#eeece6');scene.fog.color.copy(scene.background);floorMat.color.copy(scene.background);sun.intensity=night?2.6:4;renderer.toneMappingExposure=night?.85:1.1;},resize};
 }

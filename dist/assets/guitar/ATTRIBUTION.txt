@@ -1,0 +1,14 @@
+Acoustic guitar recordings
+
+Source recording collection: University of Iowa Electronic Music Studios
+http://theremin.music.uiowa.edu/
+
+Edited and distributed by Nicholas Brosowsky in tonejs-instruments:
+https://github.com/nbrosowsky/tonejs-instruments
+https://github.com/nbrosowsky/tonejs-instruments/blob/master/sample-source-info.txt
+
+Sample license: Creative Commons Attribution 3.0 Unported
+https://creativecommons.org/licenses/by/3.0/
+
+MP3 files are redistributed unchanged. NOCTURNE transposes the nearest
+recording in browser playback, with gain envelopes and room reverb.
