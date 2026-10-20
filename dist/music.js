@@ -1,16 +1,20 @@
+import {additions,trackDurations} from './library.js';
 export const catalog=[
  {id:'cherry',title:'樱花草',artist:'Sweety · 李天龙',category:'pop',bpm:83,beats:4,bars:37,source:'https://www.everyonepiano.cn/Music-2003.html'},
  {id:'moonlight',title:'月光奏鸣曲',artist:'Ludwig van Beethoven',category:'classical',bpm:54,beats:4,source:'https://github.com/KiyoEditz/Maestro'},
  {id:'river',title:'River Flows in You',artist:'Yiruma · 李闰珉',category:'pop',bpm:72,beats:4,source:'https://github.com/KiyoEditz/Maestro'},
  {id:'elise',title:'致爱丽丝',artist:'Ludwig van Beethoven',category:'classical',bpm:120,beats:3,source:'https://github.com/fabiomigueldp/pianomancer'},
  {id:'canon',title:'卡农',artist:'Johann Pachelbel',category:'classical',bpm:80,beats:4,source:'https://github.com/MAraragi/MusicalScoreRecognition'},
- {id:'golden',title:'golden hour',artist:'JVKE',category:'pop',bpm:94,beats:4,source:'https://github.com/KiyoEditz/Maestro'}
+ {id:'golden',title:'golden hour',artist:'JVKE',category:'pop',bpm:94,beats:4,source:'https://github.com/KiyoEditz/Maestro'},
+ ...additions
 ];
+for(const track of catalog)if(trackDurations[track.id])track.duration=trackDurations[track.id];
+export const canPlayTrack=t=>t.score!==null;
 export const openStrings=[40,45,50,55,59,64];
 export const chordShapes={C:[null,48,52,55,60,64],Am:[null,45,52,57,60,64],F:[41,48,53,57,60,65],G:[43,47,50,55,59,67],D:[null,null,50,57,62,66],Em:[40,47,52,55,59,64]};
 export const noteName=midi=>['C','C♯','D','D♯','E','F','F♯','G','G♯','A','A♯','B'][midi%12]+(Math.floor(midi/12)-1);
 export const format=t=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
-export function annotatePiano(notes,id){return notes.map(n=>[...n.slice(0,4),id==='cherry'?(n[3]>=.6?'R':'L'):(n[1]>=60?'R':'L')]);}
+export function annotatePiano(notes,id){return notes.map(n=>[...n.slice(0,4),['L','R'].includes(n[4])?n[4]:id==='cherry'?(n[3]>=.6?'R':'L'):(n[1]>=60?'R':'L')]);}
 export function handOf(n,instrument){return instrument==='guitar'?n[6]:n[4];}
 export function groupNotes(notes){const groups=[];for(const n of notes){const last=groups.at(-1);if(last&&n[0]-last.time<.11)last.notes.push(n);else groups.push({time:n[0],notes:[n]});}return groups;}
 export function lowerBound(notes,time){let a=0,b=notes.length;while(a<b){const m=(a+b)>>1;if(notes[m][0]<time)a=m+1;else b=m;}return a;}

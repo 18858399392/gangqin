@@ -1,0 +1,158 @@
+{
+  "relaxing": [
+    {
+      "id": "gymnopedie1",
+      "title": "吉姆诺佩蒂 No.1",
+      "artist": "Erik Satie",
+      "category": "classical",
+      "relax": true,
+      "bpm": 60,
+      "beats": 3,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=37",
+      "license": "Public Domain",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_1/gymnopedie_1.mid",
+      "duration": 143.65,
+      "version": "舒缓钢琴 · 完整乐谱"
+    },
+    {
+      "id": "gymnopedie3",
+      "title": "吉姆诺佩蒂 No.3",
+      "artist": "Erik Satie",
+      "category": "classical",
+      "relax": true,
+      "bpm": 60,
+      "beats": 3,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=39",
+      "license": "Public Domain",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SatieE/gymnopedie_3/gymnopedie_3.mid",
+      "duration": 182.65,
+      "version": "舒缓钢琴 · 完整乐谱"
+    },
+    {
+      "id": "dream",
+      "title": "梦幻曲",
+      "artist": "Robert Schumann",
+      "category": "classical",
+      "relax": true,
+      "bpm": 60,
+      "beats": 4,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=504",
+      "license": "Public Domain",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No07/SchumannOp15No07.mid",
+      "duration": 113.33,
+      "version": "舒缓钢琴 · 完整乐谱"
+    },
+    {
+      "id": "clair",
+      "title": "月光 · 德彪西",
+      "artist": "Claude Debussy",
+      "category": "classical",
+      "relax": true,
+      "bpm": 40,
+      "beats": 3,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1778",
+      "license": "Public Domain",
+      "midiSource": "https://www.mutopiaproject.org/ftp/DebussyC/L75/debussy_Ste_Bergamesq_Clair/debussy_Ste_Bergamesq_Clair.mid",
+      "duration": 324.65,
+      "version": "舒缓钢琴 · 完整乐谱"
+    },
+    {
+      "id": "bachprelude",
+      "title": "C 大调前奏曲 BWV 846",
+      "artist": "Johann Sebastian Bach",
+      "category": "classical",
+      "relax": true,
+      "bpm": 60,
+      "beats": 4,
+      "source": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/",
+      "license": "Public Domain",
+      "midiSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.mid",
+      "duration": 142.65,
+      "version": "舒缓钢琴 · 完整乐谱"
+    },
+    {
+      "id": "prelude4",
+      "title": "E 小调前奏曲 Op.28 No.4",
+      "artist": "Frédéric Chopin",
+      "category": "classical",
+      "relax": true,
+      "bpm": 28,
+      "beats": 2,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=468",
+      "license": "Public Domain",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-4/Chop-28-4.mid",
+      "duration": 110.86,
+      "version": "舒缓钢琴 · 完整乐谱"
+    }
+  ],
+  "popStudy": [
+    {
+      "id": "memories",
+      "title": "把回忆拼好给你",
+      "artist": "王贰浪",
+      "source": "https://www.everyonepiano.cn/Music-12247.html",
+      "version": "旋律练习片段 · 开头 8 小节",
+      "credit": "wza67865385"
+    },
+    {
+      "id": "xinshi",
+      "title": "心事",
+      "artist": "徐秉龙",
+      "source": "https://www.jitapuji.com/33015.html",
+      "version": "旋律练习片段 · 第 5–12 小节 · 练习 70 BPM",
+      "credit": "胡sir音乐教室 / 葛鸿艺",
+      "practiceTempo": true
+    },
+    {
+      "id": "hobby",
+      "title": "嗜好",
+      "artist": "颜人中",
+      "source": "https://www.jitapuji.com/17171.html",
+      "version": "旋律练习片段 · 主歌 8 小节 · 练习 70 BPM",
+      "credit": "无限延音 / 路人甲",
+      "practiceTempo": true
+    },
+    {
+      "id": "if",
+      "title": "If",
+      "artist": "丁可",
+      "source": "https://www.everyonepiano.cn/Music-17781.html",
+      "version": "旋律练习片段 · 第 12–20 小节",
+      "credit": "swc_alfred / AlfredShen88"
+    },
+    {
+      "id": "bachvow",
+      "title": "巴赫旧约",
+      "artist": "汪苏泷",
+      "source": "https://www.jianpujia.com/jianpu/281269.html",
+      "version": "旋律练习片段 · 主歌 8 小节 · 练习 70 BPM",
+      "credit": "公开数字谱旋律转写",
+      "practiceTempo": true
+    },
+    {
+      "id": "will",
+      "title": "会不会",
+      "artist": "刘大壮",
+      "source": "https://www.jianpujia.com/jianpu/249496.html",
+      "version": "旋律练习片段 · 第 13–20 小节",
+      "credit": "wza67865385"
+    },
+    {
+      "id": "warmtea",
+      "title": "暖一杯茶",
+      "artist": "邵帅",
+      "source": "https://www.everyonepiano.cn/Music-15089.html",
+      "version": "旋律练习片段 · 开头 8 小节",
+      "credit": "JenaV"
+    },
+    {
+      "id": "unsent57",
+      "title": "第57次取消发送",
+      "artist": "菲菲公主（陆绮菲）",
+      "source": "https://www.everyonepiano.cn/Music-18364.html",
+      "version": "旋律练习片段 · 第 5–12 小节",
+      "credit": "公开数字谱旋律转写"
+    }
+  ],
+  "note": "Pop files are transcribed short melody study excerpts, not full arrangements. No full original recordings or scanned score images are bundled."
+}
