@@ -2,6 +2,8 @@
 
 A buildless piano/guitar learning player. Serve `dist/` as a static site; `.openai/hosting.json` retains its Sites project identity.
 
+The production deployment uses the private GitHub repository `18858399392/gangqin`, with Vercel serving `dist/` directly and the intended domain `gangqin.kanglimin.com`. No dependency installation or build step is required. The final item in the main menu, 联系与反馈, opens `https://kanglimin.com/` in a separate tab.
+
 ## Playback and modes
 
 The page selects 樱花草 and attempts audible autoplay and native fullscreen. There is no central start button. When the browser allows audio, the score starts from the beginning after local samples are ready. When autoplay is blocked, the score and instrument still animate using a silent performance clock. A small status in the transport explains that a normal interaction can enable sound. Pointer/click/keyboard interaction retries audio and fullscreen where supported; audio joins the displayed score position. Intentional pause, manual play and menu actions cancel stale asynchronous requests. Browser autoplay policy still governs whether the first visit may produce sound without interaction.

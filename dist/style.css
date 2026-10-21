@@ -73,3 +73,5 @@ body.light .topbar .instrument-switch button.active{color:#30383b;background:#ff
 .mobile-landscape .learning-status{top:52px;left:20px}
 .mobile-landscape .note-readout{top:52px;right:18px;max-width:55%}
 .landscape-rotated.mobile-landscape .topbar{left:max(16px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-bottom));top:max(9px,env(safe-area-inset-left))}
+
+.menu-row.contact-link{margin-top:4px;text-decoration:none;color:var(--muted);font-size:11px;border-top:1px solid var(--line);border-bottom:0}.menu-row.contact-link:hover{color:var(--text)}
