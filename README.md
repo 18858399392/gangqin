@@ -70,3 +70,12 @@ Removed automatic camera tracking, dynamic note-dependent framing and swipe pann
 ## Readable narrow black-key labels
 
 `note-labels.js` measures note names against each projected black-key width. Names that fit stay on the key; narrower keys use readable screen-space badges with fine leader lines. Labels retain the full sharp sign and octave number, stagger into separate rows to avoid overlap, stay clear of the header, and follow the same piano/keybinding visibility rules. The 3D and Canvas renderers share this placement behavior, including day/night colors and rotated mobile coordinates. The camera stays fixed.
+
+
+## Guitar string interaction
+
+Guitar strings use a shared damped fixed-end modal model in WebGL and Canvas. Manual contact bends the selected string; release excites three decaying modes. The nut/current fret remains a vibration boundary. Low/high strings and fret positions vary the visible response; visual oscillation is slowed for readability while audio keeps its real pitch. Automatic notes, computer keys and repeated manual plucks excite the same motion.
+
+Pointer capture supports multiple simultaneous contacts and interpolates every crossed string during a fast sweep. Sweep speed controls note velocity and vibration amplitude. Manual input pauses the demo once, allowing adjacent strings to ring together; retriggering the same string damps its former voice. Audio unlock starts on contact, visual feedback starts before sample loading completes, and cancellation/menu/instrument/visibility changes clear held gestures. The camera remains fixed. Reduced-motion and disabled effects suppress displacement.
+
+Validation covers fixed nut/fret/bridge boundaries, bounded finite vibration, damping, event retriggering, both sweep directions, real WebGL vertex displacement, six-string audio polyphony, rotated-phone native multi-touch, pointer cancellation/menu cleanup, Canvas sweeps and reduced-motion/effects-off behavior. Desktop and mobile layouts are exercised in headless Chromium using SwiftShader; physical-device tactile response, speaker latency and hardware frame rate remain unmeasured.
