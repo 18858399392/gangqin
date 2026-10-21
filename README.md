@@ -2,7 +2,7 @@
 
 A buildless piano/guitar learning player. Serve `dist/` as a static site; `.openai/hosting.json` retains its Sites project identity.
 
-The production deployment uses the GitHub repository `18858399392/gangqin`, with Vercel serving `dist/` directly and the intended domain `gangqin.kanglimin.com`. No dependency installation or build step is required. The final item in the main menu, 联系与反馈, opens `https://kanglimin.com/` in a separate tab.
+The source is on GitHub at `18858399392/gangqin`. Cloudflare Workers Static Assets configuration is prepared in `wrangler.toml`, serving `dist/` directly with the custom domain `gangqin.kanglimin.com`. No dependency installation or build step is required. Deploy with `npx wrangler@4.151.3 deploy` after authenticating to the Cloudflare account that owns the domain; Wrangler manages the custom-domain route and its DNS record. The existing Vercel deployment remains available during migration. The final item in the main menu, 联系与反馈, opens `https://kanglimin.com/` in a separate tab.
 
 ## Playback and modes
 

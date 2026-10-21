@@ -1,0 +1,11 @@
+name = "gangqin"
+compatibility_date = "2026-10-21"
+workers_dev = true
+preview_urls = false
+
+routes = [
+  { pattern = "gangqin.kanglimin.com", custom_domain = true }
+]
+
+[assets]
+directory = "./dist"
