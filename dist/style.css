@@ -58,3 +58,18 @@ body.light .instrument-switch{background:#343c4507}.light .instrument-switch but
 @media(max-height:350px) and (orientation:landscape){.wordmark{font-size:9px;letter-spacing:2px}.instrument-switch{left:95px}.instrument-switch button{padding:5px 7px}.song-pill{font-size:10px}.learning-status,.note-readout{top:49px}}
 
 body.light .topbar .instrument-switch button.active{color:#30383b;background:#fffffff0}body.light .topbar .instrument-switch button{color:#647075}body.light .topbar-actions .icon-button{color:#435058}body.light .topbar .song-pill{color:#30383b}body.light .play-button:hover{color:#20292d}
+
+/* Stable landscape shell and collision-free compact phone navigation. */
+#app-shell>#stage{position:absolute;inset:0;width:100%;height:100%}
+.landscape-rotated #app-shell{left:var(--physical-w,100vw);top:0;transform:rotate(90deg);transform-origin:0 0}
+.mobile-landscape .wordmark{display:none}
+.mobile-landscape .topbar{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:12px;height:34px;left:max(16px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));top:max(9px,env(safe-area-inset-top))}
+.mobile-landscape .topbar #song-button{position:static;left:auto;right:auto;transform:none;grid-column:1;grid-row:1;justify-self:start;min-width:0;max-width:100%;padding:0 8px;height:34px;white-space:nowrap}
+.mobile-landscape #track-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.mobile-landscape .topbar .instrument-switch{position:static;left:auto;right:auto;transform:none;grid-column:2;grid-row:1;justify-self:center;padding:2px;gap:2px}
+.mobile-landscape .topbar .instrument-switch button{height:30px;padding:5px 12px;white-space:nowrap}
+.mobile-landscape .topbar .topbar-actions{grid-column:3;grid-row:1;gap:4px;justify-self:end}
+.mobile-landscape .topbar-actions .icon-button{width:34px;height:34px}
+.mobile-landscape .learning-status{top:52px;left:20px}
+.mobile-landscape .note-readout{top:52px;right:18px;max-width:55%}
+.landscape-rotated.mobile-landscape .topbar{left:max(16px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-bottom));top:max(9px,env(safe-area-inset-left))}
