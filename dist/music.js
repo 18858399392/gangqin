@@ -15,6 +15,12 @@ const composerByTrack={moonlight:'beethoven',elise:'beethoven',canon:'pachelbel'
 for(const track of catalog){if(trackDurations[track.id])track.duration=trackDurations[track.id];if(composerByTrack[track.id]){track.composer=composerByTrack[track.id];track.composerName=composerNames[track.composer];}}
 
 for(const update of fullPop){const track=catalog.find(t=>t.id===update.id);if(track)Object.assign(track,update);}
+
+// One shared order for the song menu, autoplay, and previous/next controls.
+const preferredPopOrder=new Map(['cherry','hobby','will','memories','xinshi','if','bachvow','warmtea','unsent57'].map((id,index)=>[id,index]));
+const playlistPriority=track=>preferredPopOrder.get(track.id)??(track.category==='pop'&&track.id!=='river'?preferredPopOrder.size:preferredPopOrder.size+1);
+// River Flows in You is instrumental despite its existing pop filter category.
+catalog.sort((a,b)=>playlistPriority(a)-playlistPriority(b));
 export const canPlayTrack=t=>t.score!==null;
 export const openStrings=[40,45,50,55,59,64];
 export const chordShapes={C:[null,48,52,55,60,64],Am:[null,45,52,57,60,64],F:[41,48,53,57,60,65],G:[43,47,50,55,59,67],D:[null,null,50,57,62,66],Em:[40,47,52,55,59,64]};
