@@ -1,0 +1,13 @@
+{
+  "asset": "instrument-detail.glb",
+  "author": "Original NOCTURNE close-up geometry generated for this site",
+  "source": "scripts/build-instrument-models.py",
+  "tool": "Blender 4.3.2",
+  "format": "glTF 2.0 GLB, Y-up, no external textures or Draco dependency",
+  "parts": 14,
+  "sha256": "68cb6c8fb74c4963bcef27f9331de31086ca10438a6fdca48440b8cc196b0994",
+  "notes": [
+    "Seven shouldered white-key profiles; tapered black key; rounded lacquer case profiles; radiused wood fingerboard; D-profile neck; six-slotted nut.",
+    "Models are adapted to the site coordinate system; key pivots, frets, strings and interaction events remain controlled by JavaScript."
+  ]
+}

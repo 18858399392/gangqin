@@ -1,0 +1,95 @@
+{
+  "retrievedAt": "2026-10-21",
+  "assets": [
+    {
+      "filename": "studio_small_09_1k.hdr",
+      "role": "environment-hdri",
+      "sourcePage": "https://polyhaven.com/a/studio_small_09",
+      "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_09_1k.hdr",
+      "provider": "Poly Haven",
+      "authors": [
+        "Sergej Majboroda"
+      ],
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "licenseDeed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "bytes": 1615248,
+      "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+      "modifications": "None; original 1K download"
+    },
+    {
+      "filename": "wood_table_001_diff_1k.jpg",
+      "role": "basecolor",
+      "sourcePage": "https://polyhaven.com/a/wood_table_001",
+      "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_table_001/wood_table_001_diff_1k.jpg",
+      "provider": "Poly Haven",
+      "authors": [
+        "Dimitrios Savva (Photography)",
+        "Rico Cilliers (Processing)"
+      ],
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "licenseDeed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 215573,
+      "sha256": "460dd08d240f4a1f02982415048c3c5c200f385db212da18dc7e2df68bf4d0be",
+      "modifications": "None; original 1K download"
+    },
+    {
+      "filename": "wood_table_001_nor_gl_1k.jpg",
+      "role": "normal-opengl",
+      "sourcePage": "https://polyhaven.com/a/wood_table_001",
+      "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_table_001/wood_table_001_nor_gl_1k.jpg",
+      "provider": "Poly Haven",
+      "authors": [
+        "Dimitrios Savva (Photography)",
+        "Rico Cilliers (Processing)"
+      ],
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "licenseDeed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 51927,
+      "sha256": "9bf7ddf5721e225c20290f1772ae37f9bdfd49658f6d458259eb794e2149d3cf",
+      "modifications": "None; original 1K download"
+    },
+    {
+      "filename": "wood_table_001_rough_1k.jpg",
+      "role": "roughness",
+      "sourcePage": "https://polyhaven.com/a/wood_table_001",
+      "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_table_001/wood_table_001_rough_1k.jpg",
+      "provider": "Poly Haven",
+      "authors": [
+        "Dimitrios Savva (Photography)",
+        "Rico Cilliers (Processing)"
+      ],
+      "license": "CC0-1.0",
+      "licenseUrl": "https://polyhaven.com/license",
+      "licenseDeed": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 237261,
+      "sha256": "a2ca9ae89dfe7b8e2e5e92f0aa43467845417de8a50205b5852ef0d57c7624f9",
+      "modifications": "None; original 1K download"
+    }
+  ],
+  "implementationNotes": [
+    "Wood grain runs top-to-bottom in source image: orient UVs so this follows the length of the guitar neck.",
+    "Color texture uses sRGB; normal and roughness are linear data maps.",
+    "Use wood material tint and roughness scale to reach deep brown rosewood-like art direction; source is a red-brown stained wood tabletop texture, not a species-authenticated rosewood scan.",
+    "HDRI Studio Small 09 is a neutral medium-contrast photography studio with large octaboxes; 1024x512 Radiance HDR, 1.62MB. Use PMREM and adjust envMapIntensity so black piano remains black.",
+    "Web page and API direct requests returned403 but public official asset download URLs succeeded200; authors and CC0 verified through browser search/open official PolyHaven asset and license pages."
+  ]
+}
