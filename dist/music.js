@@ -1,3 +1,5 @@
+import {fullPop} from './full-pop.js';
+import {classics,composerNames} from './classics.js';
 import {additions,trackDurations} from './library.js';
 export const catalog=[
  {id:'cherry',title:'樱花草',artist:'Sweety · 李天龙',category:'pop',bpm:83,beats:4,bars:37,source:'https://www.everyonepiano.cn/Music-2003.html'},
@@ -6,9 +8,13 @@ export const catalog=[
  {id:'elise',title:'致爱丽丝',artist:'Ludwig van Beethoven',category:'classical',bpm:120,beats:3,source:'https://github.com/fabiomigueldp/pianomancer'},
  {id:'canon',title:'卡农',artist:'Johann Pachelbel',category:'classical',bpm:80,beats:4,source:'https://github.com/MAraragi/MusicalScoreRecognition'},
  {id:'golden',title:'golden hour',artist:'JVKE',category:'pop',bpm:94,beats:4,source:'https://github.com/KiyoEditz/Maestro'},
- ...additions
+ ...additions,
+ ...classics
 ];
-for(const track of catalog)if(trackDurations[track.id])track.duration=trackDurations[track.id];
+const composerByTrack={moonlight:'beethoven',elise:'beethoven',canon:'pachelbel',gymnopedie1:'satie',gymnopedie3:'satie',dream:'schumann',clair:'debussy',bachprelude:'bach',prelude4:'chopin'};
+for(const track of catalog){if(trackDurations[track.id])track.duration=trackDurations[track.id];if(composerByTrack[track.id]){track.composer=composerByTrack[track.id];track.composerName=composerNames[track.composer];}}
+
+for(const update of fullPop){const track=catalog.find(t=>t.id===update.id);if(track)Object.assign(track,update);}
 export const canPlayTrack=t=>t.score!==null;
 export const openStrings=[40,45,50,55,59,64];
 export const chordShapes={C:[null,48,52,55,60,64],Am:[null,45,52,57,60,64],F:[41,48,53,57,60,65],G:[43,47,50,55,59,67],D:[null,null,50,57,62,66],Em:[40,47,52,55,59,64]};

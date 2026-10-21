@@ -1,0 +1,1215 @@
+{
+  "verifiedAt": "2026-10-21",
+  "tracks": [
+    {
+      "id": "pathetique1",
+      "title": "悲怆奏鸣曲 · 第一乐章",
+      "artist": "贝多芬 · Ludwig van Beethoven",
+      "composer": "beethoven",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=299",
+      "midiSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-1/pathetique-1.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Chris Sawer",
+      "version": "完整乐章",
+      "duration": 377.934,
+      "bpm": 33.0,
+      "beats": 4,
+      "sha256": "cfe2b012227077a304a0ed282a98dceaca6a73bd0fb4d3f2249ac4bacbe30121",
+      "eventSha256": "444bb8fbc9ebe211f66fa0b482c5fdd895a5fd05b82d9e7b05c0bb5b808b901e",
+      "noteCount": 4285,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "rh",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lh",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "贝多芬",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "pathetique2",
+      "title": "悲怆奏鸣曲 · 第二乐章",
+      "artist": "贝多芬 · Ludwig van Beethoven",
+      "composer": "beethoven",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=295",
+      "midiSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-2/pathetique-2.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Chris Sawer",
+      "version": "完整乐章",
+      "duration": 245.983,
+      "bpm": 36.0,
+      "beats": 2,
+      "sha256": "92c685ca98001473bcc21fa98110cc125ab489c1bf49be185e062d204a268492",
+      "eventSha256": "ad3d6a2810a378aaf5eb70382fce1ee0a6eebb085c24574a88b263d6507f9734",
+      "noteCount": 1629,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:VA",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "贝多芬",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "pathetique3",
+      "title": "悲怆奏鸣曲 · 第三乐章",
+      "artist": "贝多芬 · Ludwig van Beethoven",
+      "composer": "beethoven",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=296",
+      "midiSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/BeethovenLv/O13/pathetique-3/pathetique-3.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Chris Sawer",
+      "version": "完整乐章",
+      "duration": 235.566,
+      "bpm": 108.0,
+      "beats": 2,
+      "sha256": "e0e27f158b9eac0747569f0e4096c96c54a5eba425c567b368523afef2190797",
+      "eventSha256": "226d596552d924694f066ecc7a90ec8a5b34d4f5c0a2f1a3c169215c56337181",
+      "noteCount": 2385,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "贝多芬",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "turkish",
+      "title": "土耳其进行曲 K.331",
+      "artist": "莫扎特 · Wolfgang Amadeus Mozart",
+      "composer": "mozart",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=108",
+      "midiSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV331/KV331_3_RondoAllaTurca/KV331_3_RondoAllaTurca-a4.pdf",
+      "lilypondSource": null,
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Rune Zedeler and Chris Sawer",
+      "version": "完整乐谱",
+      "duration": 257.65,
+      "bpm": 60.0,
+      "beats": 2,
+      "sha256": "c14299cbdd34c8b2081da84dc06519ef8a52a0d589ee53c758d28b8e3d727d1c",
+      "eventSha256": "fad9cbd7d26b78a1e587a154c537062e571997d487d3400957266de6cdfc5e7a",
+      "noteCount": 1614,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "莫扎特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "mozart5451",
+      "title": "C 大调奏鸣曲 K.545 · 第一乐章",
+      "artist": "莫扎特 · Wolfgang Amadeus Mozart",
+      "composer": "mozart",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=998",
+      "midiSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-1/K545-1.ly",
+      "license": "Creative Commons Attribution-ShareAlike 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Alejandro Sierra",
+      "version": "完整乐章",
+      "duration": 134.922,
+      "bpm": 132.0,
+      "beats": 4,
+      "sha256": "54e510ba1e5865aeedc4e96bf70b83c93ecddf5b66660033ef98a5a8204ab02d",
+      "eventSha256": "c9e05cb9fd3008abfac878ae9d1e7f49277df103f9d737bab936550fd65aad8f",
+      "noteCount": 1288,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "莫扎特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "mozart5452",
+      "title": "C 大调奏鸣曲 K.545 · 第二乐章",
+      "artist": "莫扎特 · Wolfgang Amadeus Mozart",
+      "composer": "mozart",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1007",
+      "midiSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-2/K545-2.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-2/K545-2-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-2/K545-2.ly",
+      "license": "Creative Commons Attribution-ShareAlike 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Alejandro Sierra",
+      "version": "完整乐章",
+      "duration": 223.15,
+      "bpm": 60.0,
+      "beats": 3,
+      "sha256": "56aec578bd0b18b378407c7926020ad7fb16446cae4ce73c6cfc2b9e33131c29",
+      "eventSha256": "0a6e7d4641ee755e724d4780b6ad6f268ad19b89f9179b7ab637c88d5888cca2",
+      "noteCount": 1324,
+      "staffMap": [
+        {
+          "track": 2,
+          "name": "",
+          "hand": "R"
+        },
+        {
+          "track": 3,
+          "name": "",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "莫扎特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "mozart5453",
+      "title": "C 大调奏鸣曲 K.545 · 第三乐章",
+      "artist": "莫扎特 · Wolfgang Amadeus Mozart",
+      "composer": "mozart",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1027",
+      "midiSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-3/K545-3.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-3/K545-3-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV545/K545-3/K545-3.ly",
+      "license": "Creative Commons Attribution-ShareAlike 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Alejandro Sierra",
+      "version": "完整乐章",
+      "duration": 86.881,
+      "bpm": 104.0,
+      "beats": 2,
+      "sha256": "37804d835dbf51c2db6196be0bc9f6612283c0b179bab1e102a8bd43baee1fec",
+      "eventSha256": "3328771f8e8c785f0c16878637a0dc6c37855dc0a5ad119a424a52810a58a8a7",
+      "noteCount": 874,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "莫扎特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "mozartfantasy",
+      "title": "D 小调幻想曲 K.397",
+      "artist": "莫扎特 · Wolfgang Amadeus Mozart",
+      "composer": "mozart",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2034",
+      "midiSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV397/Fantasia/Fantasia.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV397/Fantasia/Fantasia-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/MozartWA/KV397/Fantasia/Fantasia.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Andrés Necochea",
+      "version": "完整乐谱",
+      "duration": 285.902,
+      "bpm": 40.0,
+      "beats": 2,
+      "sha256": "22a84b967a00f9d7cf6bec68f6d4e9c0578c1275ad0eb7fc8e30979d375e58cb",
+      "eventSha256": "32d749bc7eb7e12b35e9440568a292d6c1d05b38493a9d761e03b1f776bf230f",
+      "noteCount": 1511,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "derecha:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "izquierda:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "莫扎特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "nocturne92",
+      "title": "降 E 大调夜曲 Op.9 No.2",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1590",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/chopin_nocturne_op9_n2/chopin_nocturne_op9_n2.ly",
+      "license": "Creative Commons Attribution-ShareAlike 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "Renato Biolcati Rinaldi",
+      "version": "完整乐谱",
+      "duration": 204.923,
+      "bpm": 44.0,
+      "beats": 4,
+      "sha256": "e202d3941ce5f26397f57f59f0e2e4e3ad9e19061fa3c4dc596c5ee6a6a2548e",
+      "eventSha256": "df7e25169a4dc66434207fa3bf9c8da1924dca3f39dc43369312bc738cdde5f4",
+      "noteCount": 1242,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "nocturne91",
+      "title": "降 B 小调夜曲 Op.9 No.1",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=582",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/nocturne_in_b-flat_minor/nocturne_in_b-flat_minor.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/nocturne_in_b-flat_minor/nocturne_in_b-flat_minor-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O9/nocturne_in_b-flat_minor/nocturne_in_b-flat_minor.ly",
+      "license": "Creative Commons Attribution-ShareAlike 2.5",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/2.5/",
+      "credit": "Benjamin D. Esham",
+      "version": "完整乐谱",
+      "duration": 266.96,
+      "bpm": 116.0,
+      "beats": 6,
+      "sha256": "97194fec7586ca37280a3a5641db96f09f515c8358ccba9a9dd6a0f427ff9330",
+      "eventSha256": "ec871e5fd8dbe7e3aea3e4e9e07a3800d20e8461ec627483173808a3716824ba",
+      "noteCount": 1714,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "minutewaltz",
+      "title": "小狗圆舞曲 Op.64 No.1",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=483",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O64/chopin_valse_op64_no1/chopin_valse_op64_no1.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O64/chopin_valse_op64_no1/chopin_valse_op64_no1-a4.pdf",
+      "lilypondSource": null,
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Magnus Lewis-Smith",
+      "version": "完整乐谱",
+      "duration": 92.435,
+      "bpm": 280.001,
+      "beats": 3,
+      "sha256": "62333ad9f9b22603d009734ab500330a12ac09aeca13d185ac0ba64a7fb9d206",
+      "eventSha256": "6bd747b6a65832a27576f171b091e97503454cd1db94a02cd0f166a4aae68940",
+      "noteCount": 1370,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "rh:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lh:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "waltz692",
+      "title": "B 小调圆舞曲 Op.69 No.2",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=511",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O69/w10-h-moll-cfi/w10-h-moll-cfi.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O69/w10-h-moll-cfi/w10-h-moll-cfi-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O69/w10-h-moll-cfi/w10-h-moll-cfi.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Roland Goretzki",
+      "version": "完整乐谱",
+      "duration": 174.36,
+      "bpm": 152.0,
+      "beats": 3,
+      "sha256": "a7a0e2aca89fc9d530fe50e9538948621b8a6e1883c705353e15928d411f1ae2",
+      "eventSha256": "96947ec0a4a290d32196c1645bf7da6b7b0cda0274a6bdea7b62ca4b90283e3c",
+      "noteCount": 1603,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "fantaisie66",
+      "title": "幻想即兴曲 Op.66",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1693",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O66/chopin_fantaisie-impromptu/chopin_fantaisie-impromptu.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O66/chopin_fantaisie-impromptu/chopin_fantaisie-impromptu-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O66/chopin_fantaisie-impromptu/chopin_fantaisie-impromptu.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Guy D. Lederfein",
+      "version": "完整乐谱",
+      "duration": 256.173,
+      "bpm": 168.0,
+      "beats": 4,
+      "sha256": "b29f6add7473b6e931c2e66349e860bf0e884cf68e19e90420a4870aae689f96",
+      "eventSha256": "6c543cc31c8b823140634d27a084eee8487284fb33b9e427fe9083cc4805d60d",
+      "noteCount": 3014,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "raindrop",
+      "title": "雨滴前奏曲 Op.28 No.15",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=471",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-15/Chop-28-15.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O28/Chop-28-15/Chop-28-15-a4.pdf",
+      "lilypondSource": null,
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Magnus Lewis-Smith",
+      "version": "完整乐谱",
+      "duration": 269.65,
+      "bpm": 80.0,
+      "beats": 4,
+      "sha256": "bb9532e59bee378a42f0c53b64bf223ba4d6e261e00c1e2efb3ed8e023833bd9",
+      "eventSha256": "d9cf524d78dbdb8e2f692d25ec03934bd75c42a772b7aa4b0df3fa81d80a1829",
+      "noteCount": 1518,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "rh:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lh:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "revolutionary",
+      "title": "革命练习曲 Op.10 No.12",
+      "artist": "肖邦 · Frédéric Chopin",
+      "composer": "chopin",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=743",
+      "midiSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/ChopinFF/O10/op-10-12-wfi/op-10-12-wfi.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Roland Goretzki",
+      "version": "完整乐谱",
+      "duration": 127.9,
+      "bpm": 160.0,
+      "beats": 4,
+      "sha256": "1902287905aa68175f9d13207e6cfc397894d4210617ec1a5c1ae38334c3c7d6",
+      "eventSha256": "d27b1440eba6ae2d21fc8af6d346af59e67f4616952c6f4ffb65179d35203fd4",
+      "noteCount": 2082,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:rechts",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down:links",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "肖邦",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "arabesque1",
+      "title": "第一阿拉伯风格曲",
+      "artist": "德彪西 · Claude Debussy",
+      "composer": "debussy",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1777",
+      "midiSource": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_1/debussy_Arabesque_1.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Keith OHara",
+      "version": "完整乐谱",
+      "duration": 178.9,
+      "bpm": 144.0,
+      "beats": 4,
+      "sha256": "6732dc10799ec0af47d19d9095562d0671864a750129e0279901def169a34757",
+      "eventSha256": "dc04bede95ab1f4220fb251d6b684ba24bf5278b2363537eba8a76cc18aba728",
+      "noteCount": 1448,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "德彪西",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "arabesque2",
+      "title": "第二阿拉伯风格曲",
+      "artist": "德彪西 · Claude Debussy",
+      "composer": "debussy",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1994",
+      "midiSource": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_2/debussy_Arabesque_2.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_2/debussy_Arabesque_2-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/DebussyC/L66/debussy_Arabesque_2/debussy_Arabesque_2.ly",
+      "license": "Creative Commons Attribution-ShareAlike 4.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Knute Snortum",
+      "version": "完整乐谱",
+      "duration": 220.9,
+      "bpm": 120.0,
+      "beats": 4,
+      "sha256": "b7991339535a5436b01f4b0f8fe97304a60a0a7f38d16365692d82f6c6e22d8e",
+      "eventSha256": "6b7b6f68f9eeb4141fb19f3ad2b435f4cb3c9e9f6e3a760b554f327b084708e9",
+      "noteCount": 1803,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "德彪西",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "invention1",
+      "title": "二部创意曲 No.1 BWV 772",
+      "artist": "巴赫 · Johann Sebastian Bach",
+      "composer": "bach",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=40",
+      "midiSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-invention-01/bach-invention-01.ly",
+      "license": "Creative Commons Attribution-ShareAlike 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "credit": "jeff covey",
+      "version": "完整乐谱",
+      "duration": 68.463,
+      "bpm": 80.0,
+      "beats": 4,
+      "sha256": "9b9a6213941932d5171d9102d85912c3c1c61f8176ce02005cd2198881823c2d",
+      "eventSha256": "e3d0c8773cf6626501ab9b20d839ac01fb658b5b8c4ebe0926bac0aa97f15b79",
+      "noteCount": 458,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "one",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "two",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "巴赫",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "invention8",
+      "title": "二部创意曲 No.8 BWV 779",
+      "artist": "巴赫 · Johann Sebastian Bach",
+      "composer": "bach",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=61",
+      "midiSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV779/bach-invention-08/bach-invention-08.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV779/bach-invention-08/bach-invention-08-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/BachJS/BWV779/bach-invention-08/bach-invention-08.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Allen Garvin",
+      "version": "完整乐谱",
+      "duration": 68.983,
+      "bpm": 90.0,
+      "beats": 3,
+      "sha256": "07238719180171f76283756405ee43a0319226e869283bf29affb9e4c360e6f8",
+      "eventSha256": "8df1f1ffce2ea1f570cf36fa8e3525993b0f63c3ad443c6d0a0e151c062b0a08",
+      "noteCount": 598,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "one",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "two",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "巴赫",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "schubert903",
+      "title": "降 G 大调即兴曲 Op.90 No.3",
+      "artist": "舒伯特 · Franz Schubert",
+      "composer": "schubert",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1193",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/SchubertF/D899/SchubertF-D899-3-Impromptu/SchubertF-D899-3-Impromptu.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Ph. Raynaud",
+      "version": "完整乐谱",
+      "duration": 353.004,
+      "bpm": 60.0,
+      "beats": 4,
+      "sha256": "3ae00ab41634cd65c495a0aec41798ff191bd2690f48ec93daa53dd0266edaa2",
+      "eventSha256": "879e837c4a47e221fbd965f90ef5660407c18e056cc3289017a7a49b2a04689f",
+      "noteCount": 2581,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "upII:",
+          "hand": "R"
+        },
+        {
+          "track": 3,
+          "name": "down:",
+          "hand": "L"
+        },
+        {
+          "track": 4,
+          "name": "downII:",
+          "hand": "L"
+        },
+        {
+          "track": 5,
+          "name": "downIII:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "舒伯特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "moment3",
+      "title": "音乐瞬间 Op.94 No.3",
+      "artist": "舒伯特 · Franz Schubert",
+      "composer": "schubert",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1023",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SchubertF/D780/MomentsNo3/MomentsNo3.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/SchubertF/D780/MomentsNo3/MomentsNo3-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/SchubertF/D780/MomentsNo3/MomentsNo3.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Claude Chaudron",
+      "version": "完整乐谱",
+      "duration": 119.65,
+      "bpm": 80.0,
+      "beats": 2,
+      "sha256": "77b5ccc3a0f33128f9f4c162743d6a484bbfaa952206b69584a4c14bafc60358",
+      "eventSha256": "288de5ced1a1be0d61374191b88db30e8bd1072fe17fcdf58af43c119fcf3100",
+      "noteCount": 1059,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "treble",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "bass",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "舒伯特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "consolation3",
+      "title": "安慰曲 No.3",
+      "artist": "李斯特 · Franz Liszt",
+      "composer": "liszt",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1647",
+      "midiSource": "https://www.mutopiaproject.org/ftp/LisztF/S.172/liszt-consolation-no3/liszt-consolation-no3.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/LisztF/S.172/liszt-consolation-no3/liszt-consolation-no3-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/LisztF/S.172/liszt-consolation-no3/liszt-consolation-no3.ly",
+      "license": "Creative Commons Attribution 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by/3.0/",
+      "credit": "Ryan Prince",
+      "version": "完整乐谱",
+      "duration": 245.65,
+      "bpm": 60.0,
+      "beats": 4,
+      "sha256": "0e5a927f5753e3e7edf7f271efeb0c802d7476bed69c696798a06c780c5a1bb7",
+      "eventSha256": "beb189f64431c62486db2c8e5e1bf89ec6a6a4307b68f910d65ad5addb6a7fc7",
+      "noteCount": 1029,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up:1",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down:1",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "李斯特",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "foreignlands",
+      "title": "异国的土地和人民 Op.15 No.1",
+      "artist": "舒曼 · Robert Schumann",
+      "composer": "schumann",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=354",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No01/SchumannOp15No01.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No01/SchumannOp15No01-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/SchumannR/O15/SchumannOp15No01/SchumannOp15No01.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Ying-Chun Liu",
+      "version": "完整乐谱",
+      "duration": 39.317,
+      "bpm": 72.0,
+      "beats": 2,
+      "sha256": "e58e708afe8b31c634a0e9f3354a4ed94670e929d82926f7ff49dea3ebe146c2",
+      "eventSha256": "25106d01aeaf293e03bfc49e49e775dff21ede08cf8067fd1cbb694a0875b485",
+      "noteCount": 222,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "舒曼",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "merrypeasant",
+      "title": "快乐的农夫 Op.68 No.10",
+      "artist": "舒曼 · Robert Schumann",
+      "composer": "schumann",
+      "region": "international",
+      "category": "classical",
+      "relax": false,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=659",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-10-gai-laboureur/schumann-op68-10-gai-laboureur.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-10-gai-laboureur/schumann-op68-10-gai-laboureur-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-10-gai-laboureur/schumann-op68-10-gai-laboureur.ly",
+      "license": "Creative Commons Attribution-ShareAlike 2.5",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/2.5/",
+      "credit": "Philippe Hézaine",
+      "version": "完整乐谱",
+      "duration": 50.65,
+      "bpm": 100.0,
+      "beats": 4,
+      "sha256": "2cdada01ea988df090bfd0ab4bc377b28d97c7dee390a862822e541a47d921de",
+      "eventSha256": "28a6a44af0535e6c5afd910a62de6a55784c68c89b65fc612b0c91e1b4eaf138",
+      "noteCount": 352,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper",
+          "hand": "R"
+        },
+        {
+          "track": 3,
+          "name": "lower",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "舒曼",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "firstloss",
+      "title": "初次的悲伤 Op.68 No.16",
+      "artist": "舒曼 · Robert Schumann",
+      "composer": "schumann",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=676",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-16-premier-chagrin/schumann-op68-16-premier-chagrin.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-16-premier-chagrin/schumann-op68-16-premier-chagrin-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/SchumannR/O68/schumann-op68-16-premier-chagrin/schumann-op68-16-premier-chagrin.ly",
+      "license": "Creative Commons Attribution-ShareAlike 2.5",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/2.5/",
+      "credit": "Philippe Hézaine",
+      "version": "完整乐谱",
+      "duration": 81.274,
+      "bpm": 74.0,
+      "beats": 2,
+      "sha256": "55156715e3a34eeebb8cc6e8066b6c77c703ecd6f2a76de2d98928efdc619a9c",
+      "eventSha256": "92b7aae2a6ed90db05feb5ffac5e46fe5bc5caaf9697247581d1a6a4ca0bec97",
+      "noteCount": 314,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "舒曼",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "oldfrench",
+      "title": "古老的法国歌曲 Op.39 No.16",
+      "artist": "柴可夫斯基 · Pyotr Ilyich Tchaikovsky",
+      "composer": "tchaikovsky",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2080",
+      "midiSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/16OldFrenchSong/16OldFrenchSong.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "David McNamara",
+      "version": "完整乐谱",
+      "duration": 57.936,
+      "bpm": 70.0,
+      "beats": 2,
+      "sha256": "112c3b61dab55f58bc44d9f3522ef21b3479ffa1953097783ff8c4f10e40175d",
+      "eventSha256": "16541e07aaf1577c20d689c465f9ad831e3139570d0aadfdecfe0efa2ecc3254",
+      "noteCount": 188,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "柴可夫斯基",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "morningprayer",
+      "title": "晨祷 Op.39 No.1",
+      "artist": "柴可夫斯基 · Pyotr Ilyich Tchaikovsky",
+      "composer": "tchaikovsky",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2032",
+      "midiSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/01MorningPrayer/01MorningPrayer.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/01MorningPrayer/01MorningPrayer-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O39/01MorningPrayer/01MorningPrayer.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Rem Zolotykh",
+      "version": "完整乐谱",
+      "duration": 72.327,
+      "bpm": 62.0,
+      "beats": 3,
+      "sha256": "7ec37d25e8ea12d0b2053a5916140f7d03b4cdf1357c01171fd8a3c1d8c6e50f",
+      "eventSha256": "a768d0915f08ed8f4ef74977d1758e25bfdde7918733c4e135e90ed03561dd83",
+      "noteCount": 246,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "柴可夫斯基",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "seasonsjanuary",
+      "title": "四季 · 一月：炉边",
+      "artist": "柴可夫斯基 · Pyotr Ilyich Tchaikovsky",
+      "composer": "tchaikovsky",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1171",
+      "midiSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O37/Tschaikowsky-op37.1/Tschaikowsky-op37.1.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O37/Tschaikowsky-op37.1/Tschaikowsky-op37.1-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/TchaikovskyPI/O37/Tschaikowsky-op37.1/Tschaikowsky-op37.1.ly",
+      "license": "Public Domain",
+      "licenseUrl": "http://creativecommons.org/licenses/publicdomain/",
+      "credit": "Till Rettig",
+      "version": "完整乐谱",
+      "duration": 260.15,
+      "bpm": 72.0,
+      "beats": 3,
+      "sha256": "34110e377929c99b8f730cabdde73b11cc5cbb58573be6a1727e893b23fcbdb4",
+      "eventSha256": "2174a6d13445200860039a763dc7200a8ffc223137a7ba7022dc325e9af43ce6",
+      "noteCount": 1526,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "柴可夫斯基",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "gondola196",
+      "title": "威尼斯船歌 Op.19 No.6",
+      "artist": "门德尔松 · Felix Mendelssohn",
+      "composer": "mendelssohn",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1679",
+      "midiSource": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6.ly",
+      "license": "Creative Commons Attribution 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by/3.0/",
+      "credit": "Ryan Prince",
+      "version": "完整乐谱",
+      "duration": 140.65,
+      "bpm": 40.0,
+      "beats": 2,
+      "sha256": "5802613dedb30041f5045b3f16bb31e336a7acaedd2d0764121537fa5ab95816",
+      "eventSha256": "ee8cc51414fcbb4f7d198d575f2c96bd2a415167be2fc56de392598a24ac39b3",
+      "noteCount": 589,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "up",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "down",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "门德尔松",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "gnossienne1",
+      "title": "玄秘曲 No.1",
+      "artist": "萨蒂 · Erik Satie",
+      "composer": "satie",
+      "region": "international",
+      "category": "classical",
+      "relax": true,
+      "source": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2035",
+      "midiSource": "https://www.mutopiaproject.org/ftp/SatieE/Gnossienne/no_1/no_1.mid",
+      "pdfSource": "https://www.mutopiaproject.org/ftp/SatieE/Gnossienne/no_1/no_1-a4.pdf",
+      "lilypondSource": "https://www.mutopiaproject.org/ftp/SatieE/Gnossienne/no_1/no_1.ly",
+      "license": "Creative Commons Attribution-ShareAlike 4.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "credit": "Knute Snortum",
+      "version": "完整乐谱",
+      "duration": 199.375,
+      "bpm": 100.0,
+      "beats": 4,
+      "sha256": "f49fc6c6653295e09350d64479d09b4c31091aa5dade81f2494383ab7e71708a",
+      "eventSha256": "8f6acdf25c675759b4773879801d21911ffb83dd0e5c3c579da3afa3f57275a4",
+      "noteCount": 832,
+      "staffMap": [
+        {
+          "track": 1,
+          "name": "upper:",
+          "hand": "R"
+        },
+        {
+          "track": 2,
+          "name": "lower:",
+          "hand": "L"
+        }
+      ],
+      "conversion": "Full source MIDI converted to timed piano events; original tempo changes and note lengths retained, leading silence reduced to 150 ms, 2.5 s release tail. MIDI staff order used when staff names are empty. Pedal controls are not expanded into held-key events.",
+      "composerName": "萨蒂",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "molihua",
+      "title": "茉莉花",
+      "artist": "中国江苏民歌",
+      "credit": "Finalverse Song editorial team · Jasmine Variations",
+      "category": "chinese",
+      "bpm": 66,
+      "beats": 2,
+      "bars": 30,
+      "duration": 55.895455,
+      "version": "完整编配 · 30 小节",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://finalverse.ca/scores/mo-li-hua",
+      "download": "https://finalverse.ca/api-backend/api/v1/scores/mo-li-hua/export?format=musicxml",
+      "noteCount": 598,
+      "partCounts": {
+        "P1": 134,
+        "P2": 240,
+        "P3": 240
+      },
+      "notes": "Source already writes both melody statements out; no repeat or tie markers. Vocal melody and piano right hand map to R; original left-hand part maps to L. No lyrics bundled. Not a claim of Lang Lang/He Fang edition.",
+      "sha256": "c040c4dde9086fec5642c0c1186a6d4478e4dd0a44fba3231b75637cb7bbc2cd",
+      "composer": "traditional",
+      "composerName": "中国传统民歌",
+      "region": "cn",
+      "relax": true,
+      "eventSha256": "377ebc8494a7d57b74108f90e36fdaf99acc78126193a61892d55997d8df406e",
+      "handSource": "source-staff"
+    },
+    {
+      "id": "songbie",
+      "title": "送别 · 原曲四声部版",
+      "artist": "John P. Ordway · 李叔同填词",
+      "credit": "bbloomf · Songs from the Public Domain",
+      "category": "chinese",
+      "bpm": 90,
+      "beats": 4,
+      "duration": 64.016604,
+      "version": "完整原曲 · 四声部钢琴音色",
+      "license": "Public Domain (source dedication)",
+      "licenseUrl": "https://github.com/bbloomf/lilypond-songs/blob/master/LICENSE.md",
+      "source": "https://bbloomf.github.io/lilypond-songs/",
+      "download": "https://bbloomf.github.io/lilypond-songs/downloads/Dreaming%20of%20Home%20and%20Mother.midi",
+      "noteCount": 392,
+      "notes": "Full source is Dreaming of Home and Mother, the tune adopted for 送别. This is the source SATB arrangement rendered on piano, not a modern solo-piano edition. Source women/sopranos+altos track maps R; men/tenors+basses maps L. MIDI retains source repeat realization and tempo. No lyrics bundled.",
+      "sha256": "a7114b432ee66b219dbb273a866e5db62e93fc3daa2cb67f1bb03d3425fede89",
+      "composer": "ordway",
+      "composerName": "奥德威 · 送别原曲",
+      "region": "cn",
+      "relax": true,
+      "eventSha256": "2975f5758c9469091b82302812e5d37280b96e4ae416b0ae79f1b972032ca002",
+      "handSource": "source-staff"
+    }
+  ],
+  "note": "Complete source MIDI/score realizations; sonata movements are labelled as movements, not an entire multi-movement sonata. Each event JSON retains its source license. Printed repeats and tempo directions follow the source MIDI realization."
+}

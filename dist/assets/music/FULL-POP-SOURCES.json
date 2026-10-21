@@ -1,0 +1,40 @@
+[
+  {
+    "id": "hobby",
+    "title": "嗜好",
+    "artist": "颜人中",
+    "credit": "Turdrea",
+    "composerCredit": "郑国锋",
+    "source": "https://piastudy.com/Intermediate/1hLQ1sX1ZvV",
+    "midiSource": "https://i.insstudy.com/file/psm/midi/20250701/2288ea0fade89ae2a9c6d01f7fe0b6f1.mid",
+    "duration": 277.226,
+    "bpm": 59.0,
+    "beats": 4,
+    "study": false,
+    "handSource": "source-staff",
+    "version": "完整双手编配",
+    "noteCount": 1042,
+    "sourceSha256": "b8b5685709f1d014fe7ec50959695dfb0e46bb1a687404198c3425d480acba6a",
+    "rightsNote": "Public non-VIP user-uploaded piano arrangement; no express redistribution license found. Used within this existing owner-private personal-learning site; no original recording or scanned score bundled.",
+    "verifiedAt": "2026-10-21"
+  },
+  {
+    "id": "unsent57",
+    "title": "第57次取消发送",
+    "artist": "菲菲公主（陆绮菲）",
+    "credit": "Stonelance Magjoel",
+    "composerCredit": "IN-K",
+    "source": "https://piastudy.com/Intermediate/1AOMtbO2X",
+    "midiSource": "https://i.insstudy.com/file/psm/midi/20250821/897c09a566276bf243968845e67ffcc2.mid",
+    "duration": 194.939,
+    "bpm": 83.0,
+    "beats": 4,
+    "study": false,
+    "handSource": "source-staff",
+    "version": "完整双手编配 · A 调",
+    "noteCount": 939,
+    "sourceSha256": "74f4a187ab7c0818a6de7f1f356fc06e892498ad3d1125c6ba30fa51f3f14ac8",
+    "rightsNote": "Public non-VIP user-uploaded piano arrangement; no express redistribution license found. Used within this existing owner-private personal-learning site; no original recording or scanned score bundled.",
+    "verifiedAt": "2026-10-21"
+  }
+]
