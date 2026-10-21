@@ -36,5 +36,64 @@
     "sourceSha256": "74f4a187ab7c0818a6de7f1f356fc06e892498ad3d1125c6ba30fa51f3f14ac8",
     "rightsNote": "Public non-VIP user-uploaded piano arrangement; no express redistribution license found. Used within this existing owner-private personal-learning site; no original recording or scanned score bundled.",
     "verifiedAt": "2026-10-21"
+  },
+  {
+    "id": "will",
+    "title": "会不会",
+    "artist": "刘大壮",
+    "credit": "wza67865385",
+    "source": "https://www.jianpujia.com/jianpu/249496.html",
+    "format": "Five-page complete two-hand numbered score; reviewed manual transcription",
+    "duration": 243.712,
+    "bpm": 113,
+    "beats": 4,
+    "meterMap": [
+      {
+        "at": 0,
+        "beats": 4
+      },
+      {
+        "at": 12,
+        "beats": 6
+      },
+      {
+        "at": 18,
+        "beats": 4
+      }
+    ],
+    "key": "Gb major",
+    "barCount": 113,
+    "quarterBeats": 454,
+    "noteCount": 1036,
+    "mergedTieCount": 114,
+    "study": false,
+    "handSource": "source-staff",
+    "version": "完整双手编配 · 113 小节",
+    "sourceImages": [
+      {
+        "page": 1,
+        "sha256": "21899fc66411243d590ded712c9c973c819b13e967a497258736704a71a4b7ba"
+      },
+      {
+        "page": 2,
+        "sha256": "33d15e02aa1ed3f38f951a633d4868f503b89fff9e9b99c252b13918ec1e5cac"
+      },
+      {
+        "page": 3,
+        "sha256": "4d7825845b1b27b24c8bc2f04caa7a44557490853845d65698208ff862e792cc"
+      },
+      {
+        "page": 4,
+        "sha256": "0c2b1d3d255f763eee29899a66c4eb708aa0a007073d2ad40640aa711201f1fd"
+      },
+      {
+        "page": 5,
+        "sha256": "83101a377e0976420052fdb4c055513677cc1491e9d6a5df5c076f5205d321ae"
+      }
+    ],
+    "transcriptionSha256": "54ad74b1b7a68fe3a5120991bcfad606be0f7c8134d1f9b1451eb282b9bf4e89",
+    "eventSha256": "1a6413a4783bde3301c07feedbc6f83eee1afbce625b8fddf6a525a49e596ae9",
+    "rightsNote": "Publicly viewable user arrangement; no express redistribution license found. Existing owner-private personal learning only; no source scans, lyrics or original recording bundled.",
+    "verifiedAt": "2026-10-21"
   }
 ]
