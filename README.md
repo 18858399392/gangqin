@@ -2,7 +2,7 @@
 
 A buildless piano/guitar learning player. Serve `dist/` as a static site; `.openai/hosting.json` retains its Sites project identity.
 
-The production deployment uses the private GitHub repository `18858399392/gangqin`, with Vercel serving `dist/` directly and the intended domain `gangqin.kanglimin.com`. No dependency installation or build step is required. The final item in the main menu, 联系与反馈, opens `https://kanglimin.com/` in a separate tab.
+The production deployment uses the GitHub repository `18858399392/gangqin`, with Vercel serving `dist/` directly and the intended domain `gangqin.kanglimin.com`. No dependency installation or build step is required. The final item in the main menu, 联系与反馈, opens `https://kanglimin.com/` in a separate tab.
 
 ## Playback and modes
 
