@@ -3,6 +3,7 @@ import {createFretboard} from './guitar.js';
 import {createStudio} from './visuals.js';
 import {createInstrumentMaterials,createPhotographicLighting,loadDetailLibrary} from './realism.js';
 import {pointerIn} from './layout.js';
+import {needsKeyCallout,placeKeyCallouts} from './note-labels.js';
 import {noteName,openStrings,handOf} from './music.js';
 const LEFT=0x89d8e0,RIGHT=0xf1b79d,blackClasses=[1,3,6,8,10],whitePitch=.14;
 export function createLearningStage(container,overlay,onInput){
@@ -57,14 +58,54 @@ export function createLearningStage(container,overlay,onInput){
  }
  function resize(){width=Math.max(1,container.clientWidth||innerWidth);height=Math.max(1,container.clientHeight||innerHeight);const d=Math.min(devicePixelRatio||1,height<600?1.35:1.75);overlay.width=Math.round(width*d);overlay.height=Math.round(height*d);ctx?.setTransform(d,0,0,d,0,0);renderer?.setSize(width,height,false);cameraPose();}
  new ResizeObserver(resize).observe(container);resize();
- const projection=new THREE.Vector3(),labelPoint=new THREE.Vector3(),tint=new THREE.Color();
+ const projection=new THREE.Vector3(),labelPoint=new THREE.Vector3(),leftEdge=new THREE.Vector3(),rightEdge=new THREE.Vector3(),backAnchor=new THREE.Vector3(),tint=new THREE.Color();
  function project(x,y,z){projection.set(x,y,z).project(camera);return {x:(projection.x*.5+.5)*width,y:(-.5*projection.y+.5)*height};}
  function text(label,x,y,fill,size=11){if(!ctx)return;ctx.fillStyle=fill;ctx.font=`500 ${size}px -apple-system,Arial,sans-serif`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(label,x,y);}
- function drawLabels(events){if(!ctx)return;ctx.clearRect(0,0,width,height);if(!showLabels&&!keyboardLabels.enabled)return;const small=height<600?9:12;if(instrument==='piano')for(const [m,k] of keys){const playing=events.find(n=>n[1]===m);if(k.black&&!playing&&!keyboardLabels.enabled)continue;const v=k.key.localToWorld(labelPoint.set(0,k.black?.059:.069,k.black?.16:.38)),p=project(v.x,v.y,v.z);text(keyboardLabels.enabled?(keyboardLabels.piano(m)||noteName(m)):noteName(m),p.x,p.y,k.black?'#d5dedf':playing?(handOf(playing,'piano')==='L'?'#306a78':'#865a55'):'#757975',small);}else{
+ function noteLabel(midi){return keyboardLabels.enabled?(keyboardLabels.piano(midi)||noteName(midi)):noteName(midi);}
+ function collectCallout(list,midi,label,anchor,keyWidth,playing){
+  ctx.font=`500 ${height<600?9:12}px -apple-system,Arial,sans-serif`;
+  if(!needsKeyCallout(ctx.measureText(label).width,keyWidth))return false;
+  ctx.font=`500 ${height<600?11:12}px -apple-system,Arial,sans-serif`;
+  list.push({midi,label,anchorX:anchor.x,anchorY:anchor.y,width:Math.ceil(ctx.measureText(label).width)+14,active:Boolean(playing),left:playing&&handOf(playing,'piano')==='L'});return true;
+ }
+ function drawBlackCallouts(items){
+  const placed=placeKeyCallouts(items,width,{safeTop:height<600?72:112});
+  if(!placed.length)return;
+  ctx.save();ctx.lineWidth=.8;
+  for(const n of placed){
+   ctx.strokeStyle=n.active?(n.left?'#94dce1aa':'#f2c1b2aa'):(light?'#53626677':'#a7b4b777');
+   const cx=n.x+n.width/2,edge=n.anchorY>=n.y+n.height/2?n.y+n.height:n.y;
+   ctx.beginPath();ctx.moveTo(cx,edge);ctx.lineTo(cx,(edge+n.anchorY)/2);ctx.lineTo(n.anchorX,n.anchorY);ctx.stroke();
+   ctx.fillStyle=n.active?(n.left?'#94dce1':'#f2c1b2'):(light?'#526164':'#b3bec0');ctx.beginPath();ctx.arc(n.anchorX,n.anchorY,1.4,0,Math.PI*2);ctx.fill();
+  }
+  for(const n of placed){
+   ctx.fillStyle=light?'rgba(248,249,246,.96)':'rgba(24,29,33,.94)';round(n.x,n.y,n.width,n.height,5);ctx.fill();
+   ctx.strokeStyle=n.active?(n.left?'#80c4cfaa':'#d6a799aa'):(light?'#59676d44':'#b4c0c344');ctx.stroke();
+   text(n.label,n.x+n.width/2,n.y+n.height/2,light?'#29363c':'#f2f5f3',height<600?11:12);
+  }
+  ctx.restore();
+ }
+ function drawLabels(events){
+  if(!ctx)return;ctx.clearRect(0,0,width,height);if(!showLabels&&!keyboardLabels.enabled)return;const small=height<600?9:12;
+  if(instrument==='piano'){
+   const callouts=[];
+   for(const [m,k] of keys){
+    const playing=events.find(n=>n[1]===m);if(k.black&&!playing&&!keyboardLabels.enabled)continue;
+    const v=k.key.localToWorld(labelPoint.set(0,k.black?.059:.069,k.black?.16:.38)),p=project(v.x,v.y,v.z),label=noteLabel(m);
+    if(k.black){
+     const l=k.key.localToWorld(leftEdge.set(-.0295,.059,.16)),r=k.key.localToWorld(rightEdge.set(.0295,.059,.16));
+     const keyWidth=Math.abs(project(r.x,r.y,r.z).x-project(l.x,l.y,l.z).x),v=k.key.localToWorld(backAnchor.set(0,.059,-.27));
+     if(collectCallout(callouts,m,label,project(v.x,v.y,v.z),keyWidth,playing))continue;
+    }
+    text(label,p.x,p.y,k.black?'#d5dedf':playing?(handOf(playing,'piano')==='L'?'#306a78':'#865a55'):'#757975',small);
+   }
+   drawBlackCallouts(callouts);
+  }else{
    if(showLabels)for(const label of guitar.labels()){const p=project(label.x,label.y,label.z);text(label.text,p.x,p.y,label.type==='string'?(light?'#5f665e':'#99a19c'):(light?'#77766a':'#82887e'),small);}
    for(const n of events){const p=project(guitar.markerX(n[5]),.19,guitar.zFor(n[4]));text(String(n[5]),p.x,p.y,'#36291b',small+1);if(keyboardLabels.enabled){const key=keyboardLabels.guitar(n[4],n[5]);if(key)keyBadge(key,p.x+22,p.y-9,small);}}
    if(keyboardLabels.enabled){for(let string=0;string<6;string++)for(let fret=0;fret<4;fret++){if(events.some(n=>n[4]===string&&n[5]===fret))continue;const key=keyboardLabels.guitar(string,fret);if(!key)continue;const p=project(guitar.markerX(fret),.20,guitar.zFor(string));text(key,p.x,p.y-9,'#d8c4b59c',small-1);}}
-  }}
+  }
+ }
  function pianoFeedback(events,dt,now){
   const hits=new Set();for(const n of events){const id=n[0]+':'+n[1]+':'+(n._burst||0);hits.add(id);const k=keys.get(n[1]);if(!k)continue;k.tint=handOf(n,'piano')==='L'?LEFT:RIGHT;if(!previousHits.has(id)&&effectsEnabled&&!reduced&&now-k.pulseStart>260)k.pulseStart=now;}
   previousHits=hits;for(const [m,k] of keys){const pressed=events.some(n=>n[1]===m);k.value+=(Number(pressed)-k.value)*(reduced?1:1-Math.exp(-dt*24));k.glow+=(Number(pressed)-k.glow)*(reduced?1:1-Math.exp(-dt*(pressed?18:5)));}
@@ -79,10 +120,10 @@ export function createLearningStage(container,overlay,onInput){
  function keyBadge(label,x,y,size=10){ctx.save();ctx.font=`500 ${size}px Arial`;const w=Math.max(18,ctx.measureText(label).width+10);ctx.fillStyle='#171a24e0';round(x-w/2,y-8,w,16,4);ctx.fill();ctx.strokeStyle='#dbc2a855';ctx.lineWidth=.6;ctx.stroke();text(label,x,y,'#f4ddc4',size);ctx.restore();}
  function star(x,y,size,color,alpha=1){ctx.save();ctx.globalAlpha=alpha;ctx.fillStyle=color;ctx.shadowColor=color;ctx.shadowBlur=size*1.5;ctx.beginPath();ctx.moveTo(x,y-size);ctx.quadraticCurveTo(x+size*.22,y-size*.2,x+size,y);ctx.quadraticCurveTo(x+size*.2,y+size*.2,x,y+size);ctx.quadraticCurveTo(x-size*.2,y+size*.2,x-size,y);ctx.quadraticCurveTo(x-size*.2,y-size*.2,x,y-size);ctx.fill();ctx.restore();}
  let woodCanvas=null;
- function fallbackPiano(dt){if(!ctx)return;ctx.clearRect(0,0,width,height);const w=width*.96/whiteCount,left=width*.02,top=height*.28,keyH=height*.49,events=[...active,...held,...manual.filter(n=>n.until>performance.now()).map(n=>n.event)];pianoFeedback(events,dt,performance.now());for(const [,k] of keys)k.fallbackX=left+(k.x+keyboardWidth/2)/whitePitch*w;
+ function fallbackPiano(dt){if(!ctx)return;ctx.clearRect(0,0,width,height);const w=width*.96/whiteCount,left=width*.02,top=height*.28,keyH=height*.49,callouts=[],events=[...active,...held,...manual.filter(n=>n.until>performance.now()).map(n=>n.event)];pianoFeedback(events,dt,performance.now());for(const [,k] of keys)k.fallbackX=left+(k.x+keyboardWidth/2)/whitePitch*w;
   ctx.save();ctx.shadowColor='#0009';ctx.shadowBlur=24;ctx.shadowOffsetY=13;const body=ctx.createLinearGradient(0,top-15,0,top+keyH+18);body.addColorStop(0,'#434254');body.addColorStop(.12,'#1b1e2b');body.addColorStop(.8,'#111622');body.addColorStop(1,'#34303a');ctx.fillStyle=body;round(left-13,top-16,width*.96+26,keyH+37,8);ctx.fill();ctx.restore();ctx.fillStyle='#6b3949';ctx.fillRect(left,top-3,width*.96,3);
 
-  for(const black of [false,true])for(const [m,k] of keys)if(k.black===black){const n=events.find(e=>e[1]===m),pressed=Boolean(n),x=k.fallbackX-w*(black?.29:.47),kw=w*(black?.58:.94),h=keyH*(black?.63:1),y=top+(pressed?3:0),g=ctx.createLinearGradient(x,y,x+kw,y+h);g.addColorStop(0,black?'#616274':'#f7eee1');g.addColorStop(.12,black?'#242b3e':'#fffaf0');g.addColorStop(.7,black?'#151b29':'#eae4dc');g.addColorStop(1,black?'#2d3042':'#cbc4be');ctx.save();if(black){ctx.shadowColor='#0009';ctx.shadowBlur=5;ctx.shadowOffsetX=2;ctx.shadowOffsetY=4;}ctx.fillStyle=black?'#090e19':'#777887';round(x,y+5,kw,h,black?2.5:2);ctx.fill();ctx.fillStyle=g;round(x,y,kw,h-3,black?2.5:2);ctx.fill();ctx.shadowBlur=0;if(effectsEnabled&&(k.glow>.002||performance.now()-k.pulseStart<600)){ctx.save();round(x+1,y+1,kw-2,h-5,2);ctx.clip();const isLeft=k.tint===LEFT,cx=x+kw*.5,cy=y+h*.73;const glow=ctx.createRadialGradient(cx,cy,0,cx,cy,Math.max(kw,h*.34));glow.addColorStop(0,isLeft?'#b2f3f1':'#ffe0d2');glow.addColorStop(.4,isLeft?'#83cfd8a0':'#efb5a0a0');glow.addColorStop(1,isLeft?'#83cfd800':'#efb5a000');ctx.globalAlpha=k.glow*.62;ctx.fillStyle=glow;ctx.fillRect(x,y,kw,h);const age=(performance.now()-k.pulseStart)/600;if(!reduced&&age>=0&&age<1){ctx.globalAlpha=(1-age)**2*.26;ctx.strokeStyle=isLeft?'#e4ffff':'#fff4ec';ctx.lineWidth=.8;ctx.beginPath();ctx.arc(cx,cy,kw*(.08+.35*age),0,Math.PI*2);ctx.stroke();}ctx.restore();}if(!black){ctx.strokeStyle='#776d6199';ctx.lineWidth=1;round(x+.5,y+.5,kw-1,h-3,2);ctx.stroke();}ctx.fillStyle=black?'#e0e9ff14':'#fff8';ctx.fillRect(x+1,y+2,1,h-7);ctx.fillStyle=black?'#99a5c22f':'#a29d9a33';ctx.fillRect(x+kw-2,y+3,1,h-7);if((showLabels||keyboardLabels.enabled)&&(!black||pressed||keyboardLabels.enabled))text(keyboardLabels.enabled?(keyboardLabels.piano(m)||noteName(m)):noteName(m),x+kw/2,y+h-19,black?'#d5d7dd':pressed?(handOf(n,'piano')==='L'?'#3b6f80':'#95654f'):'#99918b',height<600?8:10);ctx.restore();}
+  for(const black of [false,true])for(const [m,k] of keys)if(k.black===black){const n=events.find(e=>e[1]===m),pressed=Boolean(n),x=k.fallbackX-w*(black?.29:.47),kw=w*(black?.58:.94),h=keyH*(black?.63:1),y=top+(pressed?3:0),g=ctx.createLinearGradient(x,y,x+kw,y+h);g.addColorStop(0,black?'#616274':'#f7eee1');g.addColorStop(.12,black?'#242b3e':'#fffaf0');g.addColorStop(.7,black?'#151b29':'#eae4dc');g.addColorStop(1,black?'#2d3042':'#cbc4be');ctx.save();if(black){ctx.shadowColor='#0009';ctx.shadowBlur=5;ctx.shadowOffsetX=2;ctx.shadowOffsetY=4;}ctx.fillStyle=black?'#090e19':'#777887';round(x,y+5,kw,h,black?2.5:2);ctx.fill();ctx.fillStyle=g;round(x,y,kw,h-3,black?2.5:2);ctx.fill();ctx.shadowBlur=0;if(effectsEnabled&&(k.glow>.002||performance.now()-k.pulseStart<600)){ctx.save();round(x+1,y+1,kw-2,h-5,2);ctx.clip();const isLeft=k.tint===LEFT,cx=x+kw*.5,cy=y+h*.73;const glow=ctx.createRadialGradient(cx,cy,0,cx,cy,Math.max(kw,h*.34));glow.addColorStop(0,isLeft?'#b2f3f1':'#ffe0d2');glow.addColorStop(.4,isLeft?'#83cfd8a0':'#efb5a0a0');glow.addColorStop(1,isLeft?'#83cfd800':'#efb5a000');ctx.globalAlpha=k.glow*.62;ctx.fillStyle=glow;ctx.fillRect(x,y,kw,h);const age=(performance.now()-k.pulseStart)/600;if(!reduced&&age>=0&&age<1){ctx.globalAlpha=(1-age)**2*.26;ctx.strokeStyle=isLeft?'#e4ffff':'#fff4ec';ctx.lineWidth=.8;ctx.beginPath();ctx.arc(cx,cy,kw*(.08+.35*age),0,Math.PI*2);ctx.stroke();}ctx.restore();}if(!black){ctx.strokeStyle='#776d6199';ctx.lineWidth=1;round(x+.5,y+.5,kw-1,h-3,2);ctx.stroke();}ctx.fillStyle=black?'#e0e9ff14':'#fff8';ctx.fillRect(x+1,y+2,1,h-7);ctx.fillStyle=black?'#99a5c22f':'#a29d9a33';ctx.fillRect(x+kw-2,y+3,1,h-7);if((showLabels||keyboardLabels.enabled)&&(!black||pressed||keyboardLabels.enabled)){const label=noteLabel(m),external=black&&collectCallout(callouts,m,label,{x:x+kw/2,y:y+4},kw,n);if(!external)text(label,x+kw/2,y+h-19,black?'#d5d7dd':pressed?(handOf(n,'piano')==='L'?'#3b6f80':'#95654f'):'#99918b',height<600?8:10);}ctx.restore();}drawBlackCallouts(callouts);
  }
  function fallbackGuitar(){if(!ctx)return;ctx.clearRect(0,0,width,height);const left=width*.06,right=width*.94,top=height*.38,h=Math.min(height*.39,240),fx=f=>left+(1-2**(-f/12))*2*(right-left),sy=s=>top+(5-s)*h/5;ctx.save();ctx.shadowColor='#0008';ctx.shadowBlur=25;ctx.shadowOffsetY=12;const side=ctx.createLinearGradient(0,top-24,0,top+h+32);side.addColorStop(0,'#c29b75');side.addColorStop(.2,'#66412f');side.addColorStop(1,'#291e25');ctx.fillStyle=side;round(left-25,top-27,right-left+50,h+65,12);ctx.fill();ctx.restore();const board=ctx.createLinearGradient(0,top,0,top+h);board.addColorStop(0,'#493126');board.addColorStop(.5,'#694434');board.addColorStop(1,'#342329');ctx.fillStyle=board;round(left-23,top-22,right-left+46,h+48,9);ctx.fill();if(!woodCanvas){woodCanvas=document.createElement('canvas');woodCanvas.width=900;woodCanvas.height=220;const wc=woodCanvas.getContext('2d');let seed=7;for(let y=0;y<220;y++){seed=(seed*1664525+1013904223)>>>0;wc.strokeStyle=seed%2?'rgba(255,208,159,.10)':'rgba(15,5,12,.18)';wc.beginPath();for(let x=0;x<=900;x+=15){const yy=y+Math.sin(x*.011+y*.23)*1.7;if(!x)wc.moveTo(x,yy);else wc.lineTo(x,yy);}wc.stroke();}}ctx.save();round(left-23,top-22,right-left+46,h+48,9);ctx.clip();ctx.drawImage(woodCanvas,left-23,top-22,right-left+46,h+48);ctx.restore();ctx.strokeStyle='#ead4a877';ctx.lineWidth=1;round(left-24,top-23,right-left+48,h+50,9);ctx.stroke();
   for(let f=0;f<=12;f++){const metal=ctx.createLinearGradient(fx(f)-1,0,fx(f)+4,0);metal.addColorStop(0,'#4c4b51');metal.addColorStop(.45,'#f5edda');metal.addColorStop(.65,'#b4b8ba');metal.addColorStop(1,'#636067');ctx.fillStyle=f?'#0d131c55':'#a49888';ctx.fillRect(fx(f)+2,top-13,f?4:6,h+27);ctx.fillStyle=metal;ctx.fillRect(fx(f),top-13,f?3:6,h+26);if(showLabels)text(String(f),f?((fx(f-1)+fx(f))/2):left-13,top-34,'#b5a79b',10);if([3,5,7,9,12].includes(f)){const x=(fx(f-1)+fx(f))/2;star(x,top+h*.5,4.5,'#cfd9d3',.7);}}

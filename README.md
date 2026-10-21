@@ -64,3 +64,7 @@ Verification includes actual headless Chromium WebGL2 rendering using SwiftShade
 ## 2026-10-21 fixed camera and embedded-phone layout repair
 
 Removed automatic camera tracking, dynamic note-dependent framing and swipe panning. Only explicit view/zoom changes, song range changes or viewport resizing reposition the camera. Mobile detection no longer requires a mobile UA or coarse pointer. The rotated shell uses the measured physical viewport width for its rotation anchor; resize, visual viewport and fullscreen changes refresh its logical landscape dimensions. Browser checks include a desktop-UA/no-touch portrait phone, six compact viewport sizes, long title collision checks, native fullscreen denial and rotated piano touch input.
+
+## Readable narrow black-key labels
+
+`note-labels.js` measures note names against each projected black-key width. Names that fit stay on the key; narrower keys use readable screen-space badges with fine leader lines. Labels retain the full sharp sign and octave number, stagger into separate rows to avoid overlap, stay clear of the header, and follow the same piano/keybinding visibility rules. The 3D and Canvas renderers share this placement behavior, including day/night colors and rotated mobile coordinates. The camera stays fixed.
