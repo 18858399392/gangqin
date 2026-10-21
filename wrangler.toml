@@ -1,4 +1,5 @@
 name = "gangqin"
+account_id = "6702cbbf69b47997a3855b61cfccddab"
 compatibility_date = "2026-10-21"
 workers_dev = false
 preview_urls = false
